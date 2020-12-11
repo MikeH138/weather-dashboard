@@ -1,0 +1,10 @@
+.searchLabel {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #343a40;
+  padding-top: 0.5rem;
+}
+
+.searchHistory {
+  padding: 0.8rem;
+}
