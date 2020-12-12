@@ -5,6 +5,36 @@
   padding-top: 0.5rem;
 }
 
-.searchHistory {
+.search-list {
   padding: 0.8rem;
+}
+
+.search-history {
+  padding-top: 1rem;
+}
+
+.pad {
+  padding-top: 1rem;
+}
+
+.card-pad {
+  padding: 0.5rem;
+}
+
+.favorable {
+  background-color: rgb(10, 180, 10);
+  color: white;
+  border-radius: 10%;
+}
+
+.moderate {
+  background-color: rgb(233, 182, 54);
+  color: white;
+  border-radius: 10%;
+}
+
+.severe {
+  background-color: rgb(233, 70, 70);
+  color: white;
+  border-radius: 10%;
 }

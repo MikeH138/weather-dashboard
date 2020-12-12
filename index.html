@@ -21,12 +21,12 @@
         <div class="col-4">
           <label for="searchBar" class="searchLabel">Search for a City:</label>
           <div class="input-group w-75">
-            <input type="search" name="searchBar" id="searchBar" class="form-control" placeholder="i.e., Hartford, Seattle">
-            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            <input type="search" name="searchBar" id="searchBar" class="form-control search-bar" placeholder="i.e., Hartford, Seattle">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i></button>
           </div>
       <!-- Search History List -->
           <div>
-            <ul class="list-group list-group-flush searchHistory">
+            <ul class="list-group search-history">
             </ul>
           </div>
         </div>
@@ -35,16 +35,17 @@
         <div class="col-8">
           <div class="card mt-3">
             <div class="card-body">
-              <h1 class="cityTitle"></h1>
+              <h1 class="city-title"></h1>
               <p class="temperature"></p>
               <p class="humidity"></p>
-              <p class="windSpeed"></p>
-              <p class="uvIndex"></p>
+              <p class="wind-speed"></p>
+              <p class="uv-index"></p>
             </div>
           </div>
 
           <div>
-            <div class="card-deck">
+            <div class="five-day-forecast pad"></div>
+            <div class="card-deck card-pad">
             </div>
           </div>
 
@@ -56,6 +57,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>
