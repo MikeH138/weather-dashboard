@@ -1,3 +1,4 @@
+$(document).ready(function () {
 // API key and other related variables
 var APIKey = "57997d33e6ed54e5bf55f2b8f7ec7cec";
 var city = "";
@@ -7,9 +8,7 @@ var lon = "";
 // DOM variables for search input and recent search list
 var searchHistory = document.querySelector(".search-history");
 
-var searchBar;
-
-var recentSearches = [];
+var recentSearches = JSON.parse(localStorage.getItem("recentSearches")) || [];
 
 // Variables for displaying the current date
 var currentDate = new Date();
@@ -102,7 +101,7 @@ function getFiveDayForecast() {
 
       forecast +=
         `<div class="card text-white bg-primary card-pad">
-          <h5>${month}/${day + i}/${year}</h5>
+          <h5>${month}/${day + 1 + i}/${year}</h5>
           <span><img src="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}.png"></span>
           <p>Temp: ${response.list[i].main.temp.toFixed(2)}&#176;F</p>
           <p>Humidity: ${response.list[i].main.humidity}&#37</p>
@@ -113,19 +112,6 @@ function getFiveDayForecast() {
 
   });
 
-}
-
-// initializer
-function init() {
-
-  var savedSearches = JSON.parse(localStorage.getItem("recentSearches"));
-
-  if (savedSearches !== null) {
-    recentSearches = savedSearches;
-  }
-
-  buildSearchList();
-  
 }
 
 // Saving recent searches to localStorage
@@ -157,3 +143,5 @@ $(".search-btn").on("click", function(e) {
   getFiveDayForecast();
 
 });
+
+})
