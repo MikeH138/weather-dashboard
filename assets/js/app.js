@@ -62,7 +62,7 @@ function buildSearchList() {
 // Generating the html for the current weather in the city the user searched for
 function displayCurrentWeather(response1, response2) {
   document.getElementById("card-body");
-  $(".city-title").html(`<h1>${response1.name} (${month}/${day}/${year}) <img src="https://openweathermap.org/img/wn/${response1.weather[0].icon}.png"></h1>`);
+  $(".city-title").html(`<h1>${response1.name} (${month + 1}/${day}/${year}) <img src="https://openweathermap.org/img/wn/${response1.weather[0].icon}.png"></h1>`);
   $(".temperature").text(`Temperature: ${response1.main.temp.toFixed(1)} °F`);
   $(".humidity").text(`Humidity: ${response1.main.humidity}%`);
   $(".wind-speed").text(`Wind Speed: ${response1.wind.speed} MPH`);
@@ -101,7 +101,7 @@ function getFiveDayForecast() {
 
       forecast +=
         `<div class="card text-white bg-primary card-pad">
-          <h5>${month}/${day + 1 + i}/${year}</h5>
+          <h5>${month + 1}/${day + 1 + i}/${year}</h5>
           <span><img src="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}.png"></span>
           <p>Temp: ${response.list[i].main.temp.toFixed(2)}&#176;F</p>
           <p>Humidity: ${response.list[i].main.humidity}&#37</p>
